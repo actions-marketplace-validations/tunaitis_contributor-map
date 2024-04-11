@@ -14,14 +14,14 @@ Adding the following to an existing workflow would create a new "contributor-map
 
 ```yml
 - name: Contributor Map
-  uses: tunaitis/contributor-map@v1
+  uses: tunaitis/contributor-map@v1.1
 ```
 
 The following example would generate a map showing contributions of the **facebook/react** repository and save it to your repository's **data** folder.
 
 ```yml
 - name: Contributor Map
-  uses: tunaitis/contributor-map@v1
+  uses: tunaitis/contributor-map@v1.1
   with:
     repository: facebbook/react
     output: data/facebook-react.svg
