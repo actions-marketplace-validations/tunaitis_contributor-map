@@ -21,10 +21,10 @@ runs:
   steps:
 
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4.1.1
 
     - name: Generate map
-      uses: docker://ghcr.io/tunaitis/contributor-map
+      uses: docker://ghcr.io/tunaitis/contributor-map:dev
       with:
         repository: ${{ inputs.repository }}
         token: ${{ github.token }}
@@ -32,6 +32,6 @@ runs:
         palette: ${{ inputs.palette }}
 
     - name: Commit the generated file back to the repository
-      uses: stefanzweifel/git-auto-commit-action@v4
+      uses: stefanzweifel/git-auto-commit-action@v5.0.0
       with:
         commit_message: Automated Change
